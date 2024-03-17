@@ -81,7 +81,10 @@ const Main = () => {
                 <FormulaHeader options={typeOfData} title={"Data"} />
             </div>
             <div className="mt-5 flex-1 items-start flex flex-col gap-0.5">
-                <h1 className="text-teal-900 font-medium">Values: <span className="text-lg font-semibold">{textareaVal.split("\n")[0] ? textareaVal.split("\n")[textareaVal.split("\n").length - 1].trim() ?  textareaVal.split("\n").length :  textareaVal.split("\n").length - 1 : 0}</span></h1>
+                <div className="flex items-center justify-between w-full">
+                    <h1 className="text-teal-900 font-medium">Value</h1>
+                    <span className="text-sm font-medium me-2">No. {textareaVal.split("\n")[0] ? textareaVal.split("\n")[textareaVal.split("\n").length - 1].trim() ?  textareaVal.split("\n").length :  textareaVal.split("\n").length - 1 : 0}</span>
+                </div>
                 <textarea placeholder="Enter or paste your data here, press Enter key on every data value"
                     className={`w-full font-semibold border-[1.5px] overflow-y-auto border-slate-300 ${invalidData ? "border-red-600 focus:border-red-600": "focus:border-blue-600"}`}
                     rows={6}
@@ -94,13 +97,13 @@ const Main = () => {
                     value={textareaVal}>
                 </textarea>
                 {invalidData && <span className="text-sm text-red-600 font-medium">{invalidData}</span>}
-                <button onClick={handleSubmitData} className="border-0 bg-main text-white font-medium text-sm py-2 px-5 rounded mt-2">Submit</button>
+                <button onClick={handleSubmitData} className="border-0 bg-main shadow-sm shadow-main text-white font-medium text-sm py-2 px-5 rounded mt-4">Submit</button>
             </div>
         </div>
-
-        <div className={`flex-1 md:p-5 p-0`}>
+        <div className="self-stretch bg-slate-300 w-[1px] portrait:hidden">
+        </div>
+        <div className={`flex-1`}>
             {!!Object.keys(result).length ? <>
-                <h1 className="text-teal-900 font-semibold text-lg">Result:</h1>
                 <Table data={result} tableLayout={formulas.filter(f => f.short === selectedFormula)} />
             </> : <div className="h-full flex items-center justify-center">
                 <ul id="result-anim" className="md:text-base font-medium text-sm text-main">
