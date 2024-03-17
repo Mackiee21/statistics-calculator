@@ -29,7 +29,7 @@ const Table = ({ data, tableLayout: [ { tableLayout } ] }) => {
   return (
     <>
     <h1 className="">Mean: {data[mean]}</h1>
-      <div className="rounded-md bg-green-300 border border-zinc-700 overflow-clip">
+      <div className="rounded-md bg-green-300 border-[1.5px] border-slate-300 overflow-clip">
         <table className="overflow-x-auto w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead className="text-sm bg-main text-white dark:bg-gray-700 dark:text-gray-400">
               <tr>

@@ -74,7 +74,7 @@ const Main = () => {
         }
     }
   return (
-    <div className="mt-7 flex md:flex-row flex-col gap-10 md:w-[90%] mx-auto md:p-0 p-3">
+    <div className="mt-7 flex md:flex-row flex-col md:portrait:flex-col gap-10 md:w-[90%] mx-auto md:p-0 p-3">
         <div className="flex-1">
             <div className="flex items-center gap-10">
                 <FormulaHeader options={formulas} title={"Formula"} setSelectedFormula={setSelectedFormula} handleSubmitData={handleSubmitData} />
@@ -83,7 +83,7 @@ const Main = () => {
             <div className="mt-5 flex-1 items-start flex flex-col gap-0.5">
                 <h1 className="text-teal-900 font-medium">Values: <span className="text-lg font-semibold">{textareaVal.split("\n")[0] ? textareaVal.split("\n")[textareaVal.split("\n").length - 1].trim() ?  textareaVal.split("\n").length :  textareaVal.split("\n").length - 1 : 0}</span></h1>
                 <textarea placeholder="Enter or paste your data here, press Enter key on every data value"
-                    className={`w-full font-semibold border-[1.5px] overflow-y-auto border-black ${invalidData ? "border-red-600 focus:border-red-600": "focus:border-blue-600"}`}
+                    className={`w-full font-semibold border-[1.5px] overflow-y-auto border-slate-300 ${invalidData ? "border-red-600 focus:border-red-600": "focus:border-blue-600"}`}
                     rows={6}
                     data-gramm="false"
                     data-gramm_editor="false"
