@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input,textarea, select{
+    @apply rounded focus:ring-0 focus:outline-none  focus:border-blue-600;
+}
+*::placeholder{
+    @apply md:text-base text-sm font-normal;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: "Raleway", sans-serif;
+    @apply bg-slate-50;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
