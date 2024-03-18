@@ -62,7 +62,7 @@ const Table = ({ data, tableLayout: [ { tableLayout } ] }) => {
               <tbody>
                     {readyTBody.map((row, idx) => {
                       return (
-                          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700" key={idx}>
+                          <tr className="bg-white border-b border-slate-300" key={idx}>
                               <td className="px-5 text-center py-3 font-medium text-gray-500 bg-slate-50">{idx + 1}</td>
                               {row.map((r, idx) => {
                                   return <td className="px-5 py-3 text-center text-gray-600 font-medium bg-slate-50" key={idx}>{r}</td>
