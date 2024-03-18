@@ -5,11 +5,11 @@ const Header = () => {
         <div className="flex-1">
           <div className='flex gap-2 items-center'>
             <div className="text-white font-medium text-lg">
-              <img src={logo} alt="logo" className='md:w-9 w-7' />
+              <img src={logo} alt="logo" className='md:w-9 w-6' />
             </div>
             <div className='flex flex-col'>
-              <h3 className="md:text-xl text-lg md:leading-6 leading-none font-bold text-white tracking-wide">Statistics Calculator</h3>
-              <p className="text-sm text-slate-50 tracking-wide">Developed by: Mackiee</p>
+              <h3 className="md:text-xl text-base md:leading-6 leading-none md:font-bold font-semibold text-white tracking-wide">Statistics Calculator</h3>
+              <p className="text-xs text-slate-50 tracking-wide">Developed by: Mackiee</p>
             </div>
           </div>
             

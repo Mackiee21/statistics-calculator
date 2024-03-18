@@ -43,9 +43,9 @@ const Table = ({ data, tableLayout: [ { tableLayout } ] }) => {
                 {readyTBody.map((row, idx) => {
                   return (
                       <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700" key={idx}>
-                          <td className="px-6 py-4 font-semibold text-black bg-slate-100">{idx + 1}</td>
+                          <td className="px-6 py-4 font-medium text-gray-500 bg-slate-100">{idx + 1}</td>
                           {row.map((r, idx) => {
-                              return <td className="px-6 py-4 text-black font-semibold bg-slate-100" key={idx}>{r}</td>
+                              return <td className="px-6 py-4 text-gray-500 font-medium bg-slate-100" key={idx}>{r}</td>
                           })}
                       </tr>
                   );

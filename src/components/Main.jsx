@@ -7,7 +7,7 @@ import gsap from "gsap"
 import { useEffect } from "react"
 
 const Main = () => {
-    const [selectedFormula, setSelectedFormula] = useState("ssd")
+    const [selectedFormula, setSelectedFormula] = useState("ssd") //initialize this one to the first choices sa formulas to make it dynamic
     const [result, setResult] = useState({});
     const [invalidData, setInvalidData] = useState(null)
     const [textareaVal, setTextareaVal] = useState('')
@@ -32,9 +32,6 @@ const Main = () => {
     const handleChange = (e) => {
         let emptySpots = 0
         const arrVals = e.target.value.split("\n")
-        console.log("hehe", arrVals[arrVals.length -1].length)
-        console.log("length", arrVals.length)
-        console.log(arrVals)
         if(!!e.target.value.match(letterRegEx)){
             setInvalidData("Only numbers are allowed")
         }
@@ -76,7 +73,7 @@ const Main = () => {
   return (
     <div className="mt-7 flex md:flex-row flex-col md:portrait:flex-col gap-10 md:w-[90%] mx-auto md:p-0 p-3">
         <div className="flex-1">
-            <div className="flex items-center gap-10">
+            <div className="flex md:flex-row flex-col md:items-center md:gap-10 gap-3">
                 <FormulaHeader options={formulas} title={"Formula"} setSelectedFormula={setSelectedFormula} handleSubmitData={handleSubmitData} />
                 <FormulaHeader options={typeOfData} title={"Data"} />
             </div>
@@ -86,7 +83,7 @@ const Main = () => {
                     <span className="text-sm font-medium me-2">No. {textareaVal.split("\n")[0] ? textareaVal.split("\n")[textareaVal.split("\n").length - 1].trim() ?  textareaVal.split("\n").length :  textareaVal.split("\n").length - 1 : 0}</span>
                 </div>
                 <textarea placeholder="Enter or paste your data here, press Enter key on every data value"
-                    className={`w-full font-semibold border-[1.5px] overflow-y-auto border-slate-300 ${invalidData ? "border-red-600 focus:border-red-600": "focus:border-blue-600"}`}
+                    className={`w-full font-medium border-[1.5px] overflow-y-auto border-slate-300 ${invalidData ? "border-red-600 focus:border-red-600": "focus:border-blue-600"}`}
                     rows={6}
                     data-gramm="false"
                     data-gramm_editor="false"
