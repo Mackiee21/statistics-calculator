@@ -1,5 +1,5 @@
 import FormulaHeader from "./FormulaHeader"
-import { formulas, typeOfData, letterRegEx } from '../constants/index'
+import { formulas, typeOfData, letterRegEx } from "../constants/index"
 import { useRef, useState } from "react"
 import Table from "./Table"
 import { useGSAP } from "@gsap/react"
